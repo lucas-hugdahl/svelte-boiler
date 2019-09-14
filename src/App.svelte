@@ -12,6 +12,8 @@
 	import Card from "./components/Card.svelte";
 
 	//some local state
+	let random_boolean = Math.random() >= 0.5;
+	let showLocations = random_boolean;
 	let events = [
 		{
 			name: "Super Party",
@@ -55,14 +57,17 @@
 				</div>
 			{/each}
 		</div>
-		<div class="row">
-			<div class="col px-3">
-				<h1>Locations</h1>
+
+		{#if showLocations}
+			<div class="row">
+				<div class="col px-3">
+					<h1>Locations</h1>
+				</div>
+				<div class="col-12 px-3">
+					{#each locations as location}
+						<h4>{location}</h4>
+					{/each}
+				</div>
 			</div>
-			<div class="col-12 px-3">
-				{#each locations as location}
-					<h4>{location}</h4>
-				{/each}
-			</div>
-		</div>
+		{/if}
 </div>
