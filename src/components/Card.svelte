@@ -8,7 +8,7 @@
 <style type="text/scss">
   .card {
     height: 500px;
-    box-shadow: 0 0 2px 4px rgba(0, 0, 0, 0.322);
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.322);
 
     &__image {
       background-position: center;
